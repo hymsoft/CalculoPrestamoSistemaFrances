@@ -58,7 +58,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClsCircularPictureBox.cs">
+    <Compile Include="CircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="colorThemes.cs" />
@@ -85,6 +85,9 @@
     </Compile>
     <Compile Include="FrmPSF.designer.cs">
       <DependentUpon>FrmPSF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LineSeparator.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

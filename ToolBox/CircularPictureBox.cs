@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace ToolBox
 {
-    class ClsCircularPictureBox : PictureBox
+    class CircularPictureBox : PictureBox
     {
         //Campos para el objeto personalizado
         //Tamaño del borde
@@ -25,7 +25,7 @@ namespace ToolBox
         private float gradientAngle = 50F;
 
         //Constructor
-        public ClsCircularPictureBox()
+        public CircularPictureBox()
         {
             //Tamaño del picturebox
             this.Size = new Size(100, 100);

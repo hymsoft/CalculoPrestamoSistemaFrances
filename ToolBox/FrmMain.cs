@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -87,6 +88,30 @@ namespace ToolBox
         private void logo_Click(object sender, EventArgs e)
         {
             AbrirForm(new FrmFechaHora());
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            //Formulario negro con transparencia para el fondo
+            Form formBG = new Form();
+
+            using (FrmAboutMe mm = new FrmAboutMe())
+            {
+                formBG.StartPosition = FormStartPosition.Manual;
+                formBG.FormBorderStyle = FormBorderStyle.None;
+                formBG.Opacity = .70d;
+                formBG.BackColor = Color.Black;
+                formBG.WindowState = FormWindowState.Maximized;
+                formBG.TopMost = true;
+                formBG.Location = this.Location;
+                formBG.ShowInTaskbar = false;
+                formBG.Show();
+
+                mm.Owner = formBG;
+                mm.ShowDialog();
+
+                formBG.Dispose();
+            }
         }
     }
 }
