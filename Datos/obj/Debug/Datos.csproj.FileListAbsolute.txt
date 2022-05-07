@@ -3,4 +3,3 @@ D:\datos_papa\Desktop\Dropbox\Programacion C# UTN-FRT\Mis Programas\ToolBox\Dato
 D:\datos_papa\Desktop\Dropbox\Programacion C# UTN-FRT\Mis Programas\ToolBox\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
 D:\datos_papa\Desktop\Dropbox\Programacion C# UTN-FRT\Mis Programas\ToolBox\Datos\obj\Debug\Datos.dll
 D:\datos_papa\Desktop\Dropbox\Programacion C# UTN-FRT\Mis Programas\ToolBox\Datos\obj\Debug\Datos.pdb
-D:\datos_papa\Desktop\Dropbox\Programacion C# UTN-FRT\Mis Programas\ToolBox\Datos\obj\Debug\Datos.csprojAssemblyReference.cache

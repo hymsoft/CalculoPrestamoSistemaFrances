@@ -38,26 +38,24 @@ namespace ToolBox
             }
 
             //Algunos datos por defecto
-            txtCapital.Text = "15000";
-            txtTNA.Text = "8";
-            txtPeriodoEnAnios.Text = "2";
+            txtCapital.Texts = "15000";
+            txtTNA.Texts = "8";
+            txtPeriodoEnAnios.Texts = "2";
             int index = cmbFrecuenciaDePagos.FindString("Mensual");
             cmbFrecuenciaDePagos.SelectedIndex = index;
-
         }
 
         private void btnCalcularImporteCuotas_Click(object sender, EventArgs e)
         {
-            if (Validaciones())
-            {
+            
                 //Vacio el grid, por si tiene datos
                 gridDesglose.Rows.Clear();
                 //creo el objeto
                 SistemaFrances prestamo = new SistemaFrances();
                 //Cargo las variables con los datos ingresados
-                double capital = double.Parse(txtCapital.Text);
-                double tasa = double.Parse(txtTNA.Text);
-                int periodoEnAnios = int.Parse(txtPeriodoEnAnios.Text);
+                double capital = double.Parse(txtCapital.Texts);
+                double tasa = double.Parse(txtTNA.Texts);
+                int periodoEnAnios = int.Parse(txtPeriodoEnAnios.Texts);
                 string frecuenciaDePagos = cmbFrecuenciaDePagos.Text;
                 //Algunos calculos elementales, obtenidos de la clase para poder averiguar la cuota a pagar
                 //realmente no es necesario, pero muestro estos datos en el formulario
@@ -67,9 +65,9 @@ namespace ToolBox
                 //Obtengo la cuota a pagar
                 double cuotaAPagar = prestamo.CuotaAPagar(capital, tasa, periodoEnAnios, frecuenciaDePagos);
                 //Cargo en el formulario los datos recibidos de la clase
-                txtPagosPorAnio.Text = pagosPorAnio.ToString();
-                txtTotalDeCuotas.Text = totalDeCuotas.ToString();
-                txtInteresEquivalente.Text = interesEquivalente.ToString("0.#####");
+                txtPagosPorAnio.Texts = pagosPorAnio.ToString();
+                txtTotalDeCuotas.Texts = totalDeCuotas.ToString();
+                txtInteresEquivalente.Texts = interesEquivalente.ToString("0.#####");
                 //Primer item del grid o item 0
                 gridDesglose.Rows.Add("0", "", "", "", capital.ToString("C", CultureInfo.CurrentCulture));
                 //Obtengo el listado de las cuotas
@@ -86,65 +84,8 @@ namespace ToolBox
                         );
                 }
                 //Actualizo las sumas de las cuotas y los intereses, tambien obtenidos por metodos de la clase
-                txtSumaDeCuotas.Text = prestamo.getSumaDeCuotas().ToString("C", CultureInfo.CurrentCulture);
-                txtSumaDeIntereses.Text = prestamo.getSumaDeIntereses().ToString("C", CultureInfo.CurrentCulture);
-
-            }
-            else
-            {
-                return;
-            }
-        }
-
-        private bool Validaciones()
-        {
-            //Valido que los campos no esten vacios
-            if (ValorVacio(txtCapital))
-            {
-                return false;
-            }
-
-            if (ValorVacio(txtTNA))
-            {
-                return false;
-            }
-
-            if (ValorVacio(txtPeriodoEnAnios))
-            {
-                return false;
-            }
-
-            if (EsNumero(txtCapital) || EsNumero(txtTNA) || EsNumero(txtPeriodoEnAnios))
-            {
-                return false;
-            }
-
-            return true;
-        }
-
-        public bool EsNumero(Control Dato)
-        {
-
-            if (!Dato.Text.All(char.IsNumber))
-            {
-                errError.SetError(Dato, "El dato no es un número");
-                Dato.Select();
-                return true;
-            }
-            errError.SetError(Dato, "");
-            return false;
-        }
-
-        private bool ValorVacio(Control Dato)
-        {
-            if (string.IsNullOrEmpty(Dato.Text))
-            {
-                errError.SetError(Dato, "El dato no puede estar vacío");
-                Dato.Select();
-                return true;
-            }
-            errError.SetError(Dato, "");
-            return false;
+                txtSumaDeCuotas.Texts = prestamo.getSumaDeCuotas().ToString("C", CultureInfo.CurrentCulture);
+                txtSumaDeIntereses.Texts = prestamo.getSumaDeIntereses().ToString("C", CultureInfo.CurrentCulture);
         }
     }
 }

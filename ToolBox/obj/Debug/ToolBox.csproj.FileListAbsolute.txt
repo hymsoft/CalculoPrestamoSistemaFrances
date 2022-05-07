@@ -18,3 +18,5 @@ D:\datos_papa\Desktop\Dropbox\Programacion C# UTN-FRT\Mis Programas\ToolBox\Tool
 D:\datos_papa\Desktop\Dropbox\Programacion C# UTN-FRT\Mis Programas\ToolBox\ToolBox\obj\Debug\ToolBox.FrmPrestamoSistemaFrances.resources
 D:\datos_papa\Desktop\Dropbox\Programacion C# UTN-FRT\Mis Programas\ToolBox\ToolBox\obj\Debug\ToolBox.FrmFechaHora.resources
 D:\datos_papa\Desktop\Dropbox\Programacion C# UTN-FRT\Mis Programas\ToolBox\ToolBox\obj\Debug\ToolBox.FrmAboutMe.resources
+D:\datos_papa\Desktop\Dropbox\Programacion C# UTN-FRT\Mis Programas\ToolBox\ToolBox\obj\Debug\ToolBox.CustomTextBox.resources
+D:\datos_papa\Desktop\Dropbox\Programacion C# UTN-FRT\Mis Programas\ToolBox\ToolBox\obj\Debug\ToolBox.PruebaControlesPersonalizados.resources
