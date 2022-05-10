@@ -28,158 +28,170 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.customTextBox3 = new ToolBox.CustomTextBox();
-            this.customTextBox2 = new ToolBox.CustomTextBox();
-            this.customTextBox1 = new ToolBox.CustomTextBox();
-            this.texto = new ToolBox.CustomTextBox();
-            this.customTextBox4 = new ToolBox.CustomTextBox();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.btnCalcularImporteCuotas = new System.Windows.Forms.Button();
+            this.txtPeriodoEnAnios = new ToolBox.CustomTextBox();
+            this.txtTNA = new ToolBox.CustomTextBox();
+            this.txtCapital = new ToolBox.CustomTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Orange;
+            this.panel1.Controls.Add(this.btnCalcularImporteCuotas);
+            this.panel1.Controls.Add(this.txtPeriodoEnAnios);
+            this.panel1.Controls.Add(this.txtTNA);
+            this.panel1.Controls.Add(this.txtCapital);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(740, 62);
+            this.panel1.Size = new System.Drawing.Size(740, 225);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // btnCalcularImporteCuotas
             // 
-            this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel2.Controls.Add(this.texto);
-            this.panel2.Controls.Add(this.customTextBox4);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 62);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(353, 246);
-            this.panel2.TabIndex = 1;
+            this.btnCalcularImporteCuotas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCalcularImporteCuotas.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalcularImporteCuotas.Location = new System.Drawing.Point(44, 162);
+            this.btnCalcularImporteCuotas.Name = "btnCalcularImporteCuotas";
+            this.btnCalcularImporteCuotas.Size = new System.Drawing.Size(385, 27);
+            this.btnCalcularImporteCuotas.TabIndex = 47;
+            this.btnCalcularImporteCuotas.Text = "Calcular";
+            this.btnCalcularImporteCuotas.UseVisualStyleBackColor = true;
+            this.btnCalcularImporteCuotas.Click += new System.EventHandler(this.btnCalcularImporteCuotas_Click);
             // 
-            // panel3
+            // txtPeriodoEnAnios
             // 
-            this.panel3.Controls.Add(this.customTextBox3);
-            this.panel3.Controls.Add(this.customTextBox2);
-            this.panel3.Controls.Add(this.customTextBox1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(353, 62);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(387, 246);
-            this.panel3.TabIndex = 2;
+            this.txtPeriodoEnAnios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
+            this.txtPeriodoEnAnios.BorderColor = System.Drawing.Color.DimGray;
+            this.txtPeriodoEnAnios.BorderFocusColor = System.Drawing.Color.White;
+            this.txtPeriodoEnAnios.BorderSize = 2;
+            this.txtPeriodoEnAnios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPeriodoEnAnios.ForeColor = System.Drawing.Color.White;
+            this.txtPeriodoEnAnios.Location = new System.Drawing.Point(192, 104);
+            this.txtPeriodoEnAnios.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPeriodoEnAnios.Multiline = false;
+            this.txtPeriodoEnAnios.Name = "txtPeriodoEnAnios";
+            this.txtPeriodoEnAnios.Padding = new System.Windows.Forms.Padding(7);
+            this.txtPeriodoEnAnios.PasswordChar = false;
+            this.txtPeriodoEnAnios.ReadOnly = false;
+            this.txtPeriodoEnAnios.Size = new System.Drawing.Size(239, 31);
+            this.txtPeriodoEnAnios.TabIndex = 43;
+            this.txtPeriodoEnAnios.Texts = "";
+            this.txtPeriodoEnAnios.UnderlinedStyle = true;
+            this.txtPeriodoEnAnios.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPeriodoEnAnios_KeyPress);
             // 
-            // customTextBox3
+            // txtTNA
             // 
-            this.customTextBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox3.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.customTextBox3.BorderFocusColor = System.Drawing.Color.Yellow;
-            this.customTextBox3.BorderSize = 2;
-            this.customTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextBox3.Location = new System.Drawing.Point(7, 144);
-            this.customTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextBox3.Multiline = false;
-            this.customTextBox3.Name = "customTextBox3";
-            this.customTextBox3.Padding = new System.Windows.Forms.Padding(7);
-            this.customTextBox3.PasswordChar = false;
-            this.customTextBox3.Size = new System.Drawing.Size(367, 31);
-            this.customTextBox3.TabIndex = 2;
-            this.customTextBox3.Texts = "";
-            this.customTextBox3.UnderlinedStyle = false;
+            this.txtTNA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
+            this.txtTNA.BorderColor = System.Drawing.Color.DimGray;
+            this.txtTNA.BorderFocusColor = System.Drawing.Color.White;
+            this.txtTNA.BorderSize = 2;
+            this.txtTNA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTNA.ForeColor = System.Drawing.Color.White;
+            this.txtTNA.Location = new System.Drawing.Point(192, 63);
+            this.txtTNA.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTNA.Multiline = false;
+            this.txtTNA.Name = "txtTNA";
+            this.txtTNA.Padding = new System.Windows.Forms.Padding(7);
+            this.txtTNA.PasswordChar = false;
+            this.txtTNA.ReadOnly = false;
+            this.txtTNA.Size = new System.Drawing.Size(239, 31);
+            this.txtTNA.TabIndex = 42;
+            this.txtTNA.Texts = "";
+            this.txtTNA.UnderlinedStyle = true;
+            this.txtTNA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTNA_KeyPress);
             // 
-            // customTextBox2
+            // txtCapital
             // 
-            this.customTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.customTextBox2.BorderFocusColor = System.Drawing.Color.Yellow;
-            this.customTextBox2.BorderSize = 2;
-            this.customTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextBox2.Location = new System.Drawing.Point(7, 88);
-            this.customTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextBox2.Multiline = false;
-            this.customTextBox2.Name = "customTextBox2";
-            this.customTextBox2.Padding = new System.Windows.Forms.Padding(7);
-            this.customTextBox2.PasswordChar = false;
-            this.customTextBox2.Size = new System.Drawing.Size(367, 31);
-            this.customTextBox2.TabIndex = 1;
-            this.customTextBox2.Texts = "";
-            this.customTextBox2.UnderlinedStyle = true;
+            this.txtCapital.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
+            this.txtCapital.BorderColor = System.Drawing.Color.DimGray;
+            this.txtCapital.BorderFocusColor = System.Drawing.Color.White;
+            this.txtCapital.BorderSize = 2;
+            this.txtCapital.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCapital.ForeColor = System.Drawing.Color.White;
+            this.txtCapital.Location = new System.Drawing.Point(192, 22);
+            this.txtCapital.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCapital.Multiline = false;
+            this.txtCapital.Name = "txtCapital";
+            this.txtCapital.Padding = new System.Windows.Forms.Padding(7);
+            this.txtCapital.PasswordChar = false;
+            this.txtCapital.ReadOnly = false;
+            this.txtCapital.Size = new System.Drawing.Size(239, 31);
+            this.txtCapital.TabIndex = 41;
+            this.txtCapital.Texts = "";
+            this.txtCapital.UnderlinedStyle = true;
+            this.txtCapital.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCapital_KeyPress);
             // 
-            // customTextBox1
+            // label5
             // 
-            this.customTextBox1.BackColor = System.Drawing.Color.LawnGreen;
-            this.customTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.customTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextBox1.BorderSize = 2;
-            this.customTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextBox1.Location = new System.Drawing.Point(77, 21);
-            this.customTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextBox1.Multiline = false;
-            this.customTextBox1.Name = "customTextBox1";
-            this.customTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.customTextBox1.PasswordChar = false;
-            this.customTextBox1.Size = new System.Drawing.Size(250, 31);
-            this.customTextBox1.TabIndex = 0;
-            this.customTextBox1.Texts = "";
-            this.customTextBox1.UnderlinedStyle = false;
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(41, 119);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 16);
+            this.label5.TabIndex = 46;
+            this.label5.Text = "Años";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // texto
+            // label3
             // 
-            this.texto.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.texto.BorderColor = System.Drawing.Color.DimGray;
-            this.texto.BorderFocusColor = System.Drawing.Color.Yellow;
-            this.texto.BorderSize = 1;
-            this.texto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.texto.ForeColor = System.Drawing.Color.White;
-            this.texto.Location = new System.Drawing.Point(32, 73);
-            this.texto.Margin = new System.Windows.Forms.Padding(4);
-            this.texto.Multiline = false;
-            this.texto.Name = "texto";
-            this.texto.Padding = new System.Windows.Forms.Padding(7);
-            this.texto.PasswordChar = false;
-            this.texto.Size = new System.Drawing.Size(250, 31);
-            this.texto.TabIndex = 1;
-            this.texto.Texts = "Prueba";
-            this.texto.UnderlinedStyle = true;
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(41, 78);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 16);
+            this.label3.TabIndex = 45;
+            this.label3.Text = "TNA %";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // customTextBox4
+            // label2
             // 
-            this.customTextBox4.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.customTextBox4.BorderColor = System.Drawing.Color.DimGray;
-            this.customTextBox4.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextBox4.BorderSize = 1;
-            this.customTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox4.ForeColor = System.Drawing.Color.White;
-            this.customTextBox4.Location = new System.Drawing.Point(32, 21);
-            this.customTextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextBox4.Multiline = false;
-            this.customTextBox4.Name = "customTextBox4";
-            this.customTextBox4.Padding = new System.Windows.Forms.Padding(7);
-            this.customTextBox4.PasswordChar = false;
-            this.customTextBox4.Size = new System.Drawing.Size(250, 31);
-            this.customTextBox4.TabIndex = 0;
-            this.customTextBox4.Texts = "";
-            this.customTextBox4.UnderlinedStyle = true;
-            this.customTextBox4._TextChanged += new System.EventHandler(this.customTextBox4__TextChanged);
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(41, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(130, 16);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "Valor del préstamo";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // PruebaControlesPersonalizados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(740, 308);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "PruebaControlesPersonalizados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PruebaControlesPersonalizados";
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -187,12 +199,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private CustomTextBox customTextBox3;
-        private CustomTextBox customTextBox2;
-        private CustomTextBox customTextBox1;
-        private CustomTextBox texto;
-        private CustomTextBox customTextBox4;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private CustomTextBox txtPeriodoEnAnios;
+        private CustomTextBox txtTNA;
+        private CustomTextBox txtCapital;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnCalcularImporteCuotas;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.MainContainer = new System.Windows.Forms.Panel();
             this.panelData = new System.Windows.Forms.Panel();
             this.gridDesglose = new System.Windows.Forms.DataGridView();
@@ -38,9 +39,6 @@
             this.gridCapitalAdeudado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelDatos = new System.Windows.Forms.TableLayoutPanel();
             this.penelDatosIzquierdo = new System.Windows.Forms.Panel();
-            this.txtPeriodoEnAnios = new ToolBox.CustomTextBox();
-            this.txtTNA = new ToolBox.CustomTextBox();
-            this.txtCapital = new ToolBox.CustomTextBox();
             this.btnCalcularImporteCuotas = new System.Windows.Forms.Button();
             this.cmbFrecuenciaDePagos = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,23 +46,27 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panelDatosDerecho = new System.Windows.Forms.Panel();
-            this.txtSumaDeIntereses = new ToolBox.CustomTextBox();
-            this.txtSumaDeCuotas = new ToolBox.CustomTextBox();
-            this.txtTotalDeCuotas = new ToolBox.CustomTextBox();
-            this.txtPagosPorAnio = new ToolBox.CustomTextBox();
-            this.txtInteresEquivalente = new ToolBox.CustomTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label100 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtPeriodoEnAnios = new ToolBox.CustomTextBox();
+            this.txtTNA = new ToolBox.CustomTextBox();
+            this.txtCapital = new ToolBox.CustomTextBox();
+            this.txtSumaDeIntereses = new ToolBox.CustomTextBox();
+            this.txtSumaDeCuotas = new ToolBox.CustomTextBox();
+            this.txtTotalDeCuotas = new ToolBox.CustomTextBox();
+            this.txtPagosPorAnio = new ToolBox.CustomTextBox();
+            this.txtInteresEquivalente = new ToolBox.CustomTextBox();
             this.MainContainer.SuspendLayout();
             this.panelData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridDesglose)).BeginInit();
             this.panelDatos.SuspendLayout();
             this.penelDatosIzquierdo.SuspendLayout();
             this.panelDatosDerecho.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // MainContainer
@@ -158,7 +160,6 @@
             // penelDatosIzquierdo
             // 
             this.penelDatosIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
-            this.penelDatosIzquierdo.Controls.Add(this.textBox1);
             this.penelDatosIzquierdo.Controls.Add(this.txtPeriodoEnAnios);
             this.penelDatosIzquierdo.Controls.Add(this.txtTNA);
             this.penelDatosIzquierdo.Controls.Add(this.txtCapital);
@@ -175,66 +176,6 @@
             this.penelDatosIzquierdo.Size = new System.Drawing.Size(403, 207);
             this.penelDatosIzquierdo.TabIndex = 0;
             // 
-            // txtPeriodoEnAnios
-            // 
-            this.txtPeriodoEnAnios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
-            this.txtPeriodoEnAnios.BorderColor = System.Drawing.Color.DimGray;
-            this.txtPeriodoEnAnios.BorderFocusColor = System.Drawing.Color.White;
-            this.txtPeriodoEnAnios.BorderSize = 2;
-            this.txtPeriodoEnAnios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPeriodoEnAnios.ForeColor = System.Drawing.Color.White;
-            this.txtPeriodoEnAnios.Location = new System.Drawing.Point(157, 93);
-            this.txtPeriodoEnAnios.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPeriodoEnAnios.Multiline = false;
-            this.txtPeriodoEnAnios.Name = "txtPeriodoEnAnios";
-            this.txtPeriodoEnAnios.Padding = new System.Windows.Forms.Padding(7);
-            this.txtPeriodoEnAnios.PasswordChar = false;
-            this.txtPeriodoEnAnios.ReadOnly = false;
-            this.txtPeriodoEnAnios.Size = new System.Drawing.Size(239, 31);
-            this.txtPeriodoEnAnios.TabIndex = 3;
-            this.txtPeriodoEnAnios.Texts = "";
-            this.txtPeriodoEnAnios.UnderlinedStyle = true;
-            // 
-            // txtTNA
-            // 
-            this.txtTNA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
-            this.txtTNA.BorderColor = System.Drawing.Color.DimGray;
-            this.txtTNA.BorderFocusColor = System.Drawing.Color.White;
-            this.txtTNA.BorderSize = 2;
-            this.txtTNA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTNA.ForeColor = System.Drawing.Color.White;
-            this.txtTNA.Location = new System.Drawing.Point(157, 52);
-            this.txtTNA.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTNA.Multiline = false;
-            this.txtTNA.Name = "txtTNA";
-            this.txtTNA.Padding = new System.Windows.Forms.Padding(7);
-            this.txtTNA.PasswordChar = false;
-            this.txtTNA.ReadOnly = false;
-            this.txtTNA.Size = new System.Drawing.Size(239, 31);
-            this.txtTNA.TabIndex = 2;
-            this.txtTNA.Texts = "";
-            this.txtTNA.UnderlinedStyle = true;
-            // 
-            // txtCapital
-            // 
-            this.txtCapital.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
-            this.txtCapital.BorderColor = System.Drawing.Color.DimGray;
-            this.txtCapital.BorderFocusColor = System.Drawing.Color.White;
-            this.txtCapital.BorderSize = 2;
-            this.txtCapital.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCapital.ForeColor = System.Drawing.Color.White;
-            this.txtCapital.Location = new System.Drawing.Point(157, 11);
-            this.txtCapital.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCapital.Multiline = false;
-            this.txtCapital.Name = "txtCapital";
-            this.txtCapital.Padding = new System.Windows.Forms.Padding(7);
-            this.txtCapital.PasswordChar = false;
-            this.txtCapital.ReadOnly = false;
-            this.txtCapital.Size = new System.Drawing.Size(239, 31);
-            this.txtCapital.TabIndex = 1;
-            this.txtCapital.Texts = "";
-            this.txtCapital.UnderlinedStyle = true;
-            // 
             // btnCalcularImporteCuotas
             // 
             this.btnCalcularImporteCuotas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -242,7 +183,7 @@
             this.btnCalcularImporteCuotas.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalcularImporteCuotas.Location = new System.Drawing.Point(11, 168);
             this.btnCalcularImporteCuotas.Name = "btnCalcularImporteCuotas";
-            this.btnCalcularImporteCuotas.Size = new System.Drawing.Size(385, 27);
+            this.btnCalcularImporteCuotas.Size = new System.Drawing.Size(380, 27);
             this.btnCalcularImporteCuotas.TabIndex = 5;
             this.btnCalcularImporteCuotas.Text = "Calcular";
             this.btnCalcularImporteCuotas.UseVisualStyleBackColor = true;
@@ -258,7 +199,7 @@
             this.cmbFrecuenciaDePagos.FormattingEnabled = true;
             this.cmbFrecuenciaDePagos.Location = new System.Drawing.Point(157, 134);
             this.cmbFrecuenciaDePagos.Name = "cmbFrecuenciaDePagos";
-            this.cmbFrecuenciaDePagos.Size = new System.Drawing.Size(239, 24);
+            this.cmbFrecuenciaDePagos.Size = new System.Drawing.Size(234, 24);
             this.cmbFrecuenciaDePagos.TabIndex = 4;
             // 
             // label5
@@ -337,116 +278,6 @@
             this.panelDatosDerecho.Size = new System.Drawing.Size(403, 207);
             this.panelDatosDerecho.TabIndex = 1;
             // 
-            // txtSumaDeIntereses
-            // 
-            this.txtSumaDeIntereses.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSumaDeIntereses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
-            this.txtSumaDeIntereses.BorderColor = System.Drawing.Color.DimGray;
-            this.txtSumaDeIntereses.BorderFocusColor = System.Drawing.Color.White;
-            this.txtSumaDeIntereses.BorderSize = 2;
-            this.txtSumaDeIntereses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSumaDeIntereses.ForeColor = System.Drawing.Color.White;
-            this.txtSumaDeIntereses.Location = new System.Drawing.Point(172, 163);
-            this.txtSumaDeIntereses.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSumaDeIntereses.Multiline = false;
-            this.txtSumaDeIntereses.Name = "txtSumaDeIntereses";
-            this.txtSumaDeIntereses.Padding = new System.Windows.Forms.Padding(7);
-            this.txtSumaDeIntereses.PasswordChar = false;
-            this.txtSumaDeIntereses.ReadOnly = true;
-            this.txtSumaDeIntereses.Size = new System.Drawing.Size(223, 31);
-            this.txtSumaDeIntereses.TabIndex = 10;
-            this.txtSumaDeIntereses.Texts = "";
-            this.txtSumaDeIntereses.UnderlinedStyle = true;
-            // 
-            // txtSumaDeCuotas
-            // 
-            this.txtSumaDeCuotas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSumaDeCuotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
-            this.txtSumaDeCuotas.BorderColor = System.Drawing.Color.DimGray;
-            this.txtSumaDeCuotas.BorderFocusColor = System.Drawing.Color.White;
-            this.txtSumaDeCuotas.BorderSize = 2;
-            this.txtSumaDeCuotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSumaDeCuotas.ForeColor = System.Drawing.Color.White;
-            this.txtSumaDeCuotas.Location = new System.Drawing.Point(172, 125);
-            this.txtSumaDeCuotas.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSumaDeCuotas.Multiline = false;
-            this.txtSumaDeCuotas.Name = "txtSumaDeCuotas";
-            this.txtSumaDeCuotas.Padding = new System.Windows.Forms.Padding(7);
-            this.txtSumaDeCuotas.PasswordChar = false;
-            this.txtSumaDeCuotas.ReadOnly = true;
-            this.txtSumaDeCuotas.Size = new System.Drawing.Size(223, 31);
-            this.txtSumaDeCuotas.TabIndex = 9;
-            this.txtSumaDeCuotas.Texts = "";
-            this.txtSumaDeCuotas.UnderlinedStyle = true;
-            // 
-            // txtTotalDeCuotas
-            // 
-            this.txtTotalDeCuotas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTotalDeCuotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
-            this.txtTotalDeCuotas.BorderColor = System.Drawing.Color.DimGray;
-            this.txtTotalDeCuotas.BorderFocusColor = System.Drawing.Color.White;
-            this.txtTotalDeCuotas.BorderSize = 2;
-            this.txtTotalDeCuotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalDeCuotas.ForeColor = System.Drawing.Color.White;
-            this.txtTotalDeCuotas.Location = new System.Drawing.Point(172, 87);
-            this.txtTotalDeCuotas.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTotalDeCuotas.Multiline = false;
-            this.txtTotalDeCuotas.Name = "txtTotalDeCuotas";
-            this.txtTotalDeCuotas.Padding = new System.Windows.Forms.Padding(7);
-            this.txtTotalDeCuotas.PasswordChar = false;
-            this.txtTotalDeCuotas.ReadOnly = true;
-            this.txtTotalDeCuotas.Size = new System.Drawing.Size(223, 31);
-            this.txtTotalDeCuotas.TabIndex = 8;
-            this.txtTotalDeCuotas.Texts = "";
-            this.txtTotalDeCuotas.UnderlinedStyle = true;
-            // 
-            // txtPagosPorAnio
-            // 
-            this.txtPagosPorAnio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPagosPorAnio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
-            this.txtPagosPorAnio.BorderColor = System.Drawing.Color.DimGray;
-            this.txtPagosPorAnio.BorderFocusColor = System.Drawing.Color.White;
-            this.txtPagosPorAnio.BorderSize = 2;
-            this.txtPagosPorAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPagosPorAnio.ForeColor = System.Drawing.Color.White;
-            this.txtPagosPorAnio.Location = new System.Drawing.Point(172, 49);
-            this.txtPagosPorAnio.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPagosPorAnio.Multiline = false;
-            this.txtPagosPorAnio.Name = "txtPagosPorAnio";
-            this.txtPagosPorAnio.Padding = new System.Windows.Forms.Padding(7);
-            this.txtPagosPorAnio.PasswordChar = false;
-            this.txtPagosPorAnio.ReadOnly = true;
-            this.txtPagosPorAnio.Size = new System.Drawing.Size(223, 31);
-            this.txtPagosPorAnio.TabIndex = 7;
-            this.txtPagosPorAnio.Texts = "";
-            this.txtPagosPorAnio.UnderlinedStyle = true;
-            // 
-            // txtInteresEquivalente
-            // 
-            this.txtInteresEquivalente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtInteresEquivalente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
-            this.txtInteresEquivalente.BorderColor = System.Drawing.Color.DimGray;
-            this.txtInteresEquivalente.BorderFocusColor = System.Drawing.Color.White;
-            this.txtInteresEquivalente.BorderSize = 2;
-            this.txtInteresEquivalente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInteresEquivalente.ForeColor = System.Drawing.Color.White;
-            this.txtInteresEquivalente.Location = new System.Drawing.Point(172, 11);
-            this.txtInteresEquivalente.Margin = new System.Windows.Forms.Padding(4);
-            this.txtInteresEquivalente.Multiline = false;
-            this.txtInteresEquivalente.Name = "txtInteresEquivalente";
-            this.txtInteresEquivalente.Padding = new System.Windows.Forms.Padding(7);
-            this.txtInteresEquivalente.PasswordChar = false;
-            this.txtInteresEquivalente.ReadOnly = true;
-            this.txtInteresEquivalente.Size = new System.Drawing.Size(223, 31);
-            this.txtInteresEquivalente.TabIndex = 6;
-            this.txtInteresEquivalente.Texts = "";
-            this.txtInteresEquivalente.UnderlinedStyle = true;
-            // 
             // label9
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -517,12 +348,188 @@
             this.label100.Text = "Interes Equivalente";
             this.label100.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox1
+            // errorProvider1
             // 
-            this.textBox1.Location = new System.Drawing.Point(88, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 41;
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // txtPeriodoEnAnios
+            // 
+            this.txtPeriodoEnAnios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPeriodoEnAnios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
+            this.txtPeriodoEnAnios.BorderColor = System.Drawing.Color.DimGray;
+            this.txtPeriodoEnAnios.BorderFocusColor = System.Drawing.Color.White;
+            this.txtPeriodoEnAnios.BorderSize = 2;
+            this.txtPeriodoEnAnios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPeriodoEnAnios.ForeColor = System.Drawing.Color.White;
+            this.txtPeriodoEnAnios.Location = new System.Drawing.Point(157, 93);
+            this.txtPeriodoEnAnios.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPeriodoEnAnios.Multiline = false;
+            this.txtPeriodoEnAnios.Name = "txtPeriodoEnAnios";
+            this.txtPeriodoEnAnios.Padding = new System.Windows.Forms.Padding(7);
+            this.txtPeriodoEnAnios.PasswordChar = false;
+            this.txtPeriodoEnAnios.ReadOnly = false;
+            this.txtPeriodoEnAnios.Size = new System.Drawing.Size(203, 31);
+            this.txtPeriodoEnAnios.TabIndex = 3;
+            this.txtPeriodoEnAnios.Texts = "";
+            this.txtPeriodoEnAnios.UnderlinedStyle = true;
+            this.txtPeriodoEnAnios.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPeriodoEnAnios_KeyPress);
+            // 
+            // txtTNA
+            // 
+            this.txtTNA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTNA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
+            this.txtTNA.BorderColor = System.Drawing.Color.DimGray;
+            this.txtTNA.BorderFocusColor = System.Drawing.Color.White;
+            this.txtTNA.BorderSize = 2;
+            this.txtTNA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTNA.ForeColor = System.Drawing.Color.White;
+            this.txtTNA.Location = new System.Drawing.Point(157, 52);
+            this.txtTNA.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTNA.Multiline = false;
+            this.txtTNA.Name = "txtTNA";
+            this.txtTNA.Padding = new System.Windows.Forms.Padding(7);
+            this.txtTNA.PasswordChar = false;
+            this.txtTNA.ReadOnly = false;
+            this.txtTNA.Size = new System.Drawing.Size(203, 31);
+            this.txtTNA.TabIndex = 2;
+            this.txtTNA.Texts = "";
+            this.txtTNA.UnderlinedStyle = true;
+            this.txtTNA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTNA_KeyPress);
+            // 
+            // txtCapital
+            // 
+            this.txtCapital.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCapital.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
+            this.txtCapital.BorderColor = System.Drawing.Color.DimGray;
+            this.txtCapital.BorderFocusColor = System.Drawing.Color.White;
+            this.txtCapital.BorderSize = 2;
+            this.txtCapital.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCapital.ForeColor = System.Drawing.Color.White;
+            this.txtCapital.Location = new System.Drawing.Point(157, 11);
+            this.txtCapital.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCapital.Multiline = false;
+            this.txtCapital.Name = "txtCapital";
+            this.txtCapital.Padding = new System.Windows.Forms.Padding(7);
+            this.txtCapital.PasswordChar = false;
+            this.txtCapital.ReadOnly = false;
+            this.txtCapital.Size = new System.Drawing.Size(203, 31);
+            this.txtCapital.TabIndex = 1;
+            this.txtCapital.Texts = "";
+            this.txtCapital.UnderlinedStyle = true;
+            this.txtCapital.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCapital_KeyPress);
+            // 
+            // txtSumaDeIntereses
+            // 
+            this.txtSumaDeIntereses.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSumaDeIntereses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
+            this.txtSumaDeIntereses.BorderColor = System.Drawing.Color.DimGray;
+            this.txtSumaDeIntereses.BorderFocusColor = System.Drawing.Color.White;
+            this.txtSumaDeIntereses.BorderSize = 2;
+            this.txtSumaDeIntereses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSumaDeIntereses.ForeColor = System.Drawing.Color.White;
+            this.txtSumaDeIntereses.Location = new System.Drawing.Point(172, 163);
+            this.txtSumaDeIntereses.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSumaDeIntereses.Multiline = false;
+            this.txtSumaDeIntereses.Name = "txtSumaDeIntereses";
+            this.txtSumaDeIntereses.Padding = new System.Windows.Forms.Padding(7);
+            this.txtSumaDeIntereses.PasswordChar = false;
+            this.txtSumaDeIntereses.ReadOnly = true;
+            this.txtSumaDeIntereses.Size = new System.Drawing.Size(218, 31);
+            this.txtSumaDeIntereses.TabIndex = 10;
+            this.txtSumaDeIntereses.Texts = "";
+            this.txtSumaDeIntereses.UnderlinedStyle = true;
+            // 
+            // txtSumaDeCuotas
+            // 
+            this.txtSumaDeCuotas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSumaDeCuotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
+            this.txtSumaDeCuotas.BorderColor = System.Drawing.Color.DimGray;
+            this.txtSumaDeCuotas.BorderFocusColor = System.Drawing.Color.White;
+            this.txtSumaDeCuotas.BorderSize = 2;
+            this.txtSumaDeCuotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSumaDeCuotas.ForeColor = System.Drawing.Color.White;
+            this.txtSumaDeCuotas.Location = new System.Drawing.Point(172, 125);
+            this.txtSumaDeCuotas.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSumaDeCuotas.Multiline = false;
+            this.txtSumaDeCuotas.Name = "txtSumaDeCuotas";
+            this.txtSumaDeCuotas.Padding = new System.Windows.Forms.Padding(7);
+            this.txtSumaDeCuotas.PasswordChar = false;
+            this.txtSumaDeCuotas.ReadOnly = true;
+            this.txtSumaDeCuotas.Size = new System.Drawing.Size(218, 31);
+            this.txtSumaDeCuotas.TabIndex = 9;
+            this.txtSumaDeCuotas.Texts = "";
+            this.txtSumaDeCuotas.UnderlinedStyle = true;
+            // 
+            // txtTotalDeCuotas
+            // 
+            this.txtTotalDeCuotas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTotalDeCuotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
+            this.txtTotalDeCuotas.BorderColor = System.Drawing.Color.DimGray;
+            this.txtTotalDeCuotas.BorderFocusColor = System.Drawing.Color.White;
+            this.txtTotalDeCuotas.BorderSize = 2;
+            this.txtTotalDeCuotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalDeCuotas.ForeColor = System.Drawing.Color.White;
+            this.txtTotalDeCuotas.Location = new System.Drawing.Point(172, 87);
+            this.txtTotalDeCuotas.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotalDeCuotas.Multiline = false;
+            this.txtTotalDeCuotas.Name = "txtTotalDeCuotas";
+            this.txtTotalDeCuotas.Padding = new System.Windows.Forms.Padding(7);
+            this.txtTotalDeCuotas.PasswordChar = false;
+            this.txtTotalDeCuotas.ReadOnly = true;
+            this.txtTotalDeCuotas.Size = new System.Drawing.Size(218, 31);
+            this.txtTotalDeCuotas.TabIndex = 8;
+            this.txtTotalDeCuotas.Texts = "";
+            this.txtTotalDeCuotas.UnderlinedStyle = true;
+            // 
+            // txtPagosPorAnio
+            // 
+            this.txtPagosPorAnio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPagosPorAnio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
+            this.txtPagosPorAnio.BorderColor = System.Drawing.Color.DimGray;
+            this.txtPagosPorAnio.BorderFocusColor = System.Drawing.Color.White;
+            this.txtPagosPorAnio.BorderSize = 2;
+            this.txtPagosPorAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPagosPorAnio.ForeColor = System.Drawing.Color.White;
+            this.txtPagosPorAnio.Location = new System.Drawing.Point(172, 49);
+            this.txtPagosPorAnio.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPagosPorAnio.Multiline = false;
+            this.txtPagosPorAnio.Name = "txtPagosPorAnio";
+            this.txtPagosPorAnio.Padding = new System.Windows.Forms.Padding(7);
+            this.txtPagosPorAnio.PasswordChar = false;
+            this.txtPagosPorAnio.ReadOnly = true;
+            this.txtPagosPorAnio.Size = new System.Drawing.Size(218, 31);
+            this.txtPagosPorAnio.TabIndex = 7;
+            this.txtPagosPorAnio.Texts = "";
+            this.txtPagosPorAnio.UnderlinedStyle = true;
+            // 
+            // txtInteresEquivalente
+            // 
+            this.txtInteresEquivalente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtInteresEquivalente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
+            this.txtInteresEquivalente.BorderColor = System.Drawing.Color.DimGray;
+            this.txtInteresEquivalente.BorderFocusColor = System.Drawing.Color.White;
+            this.txtInteresEquivalente.BorderSize = 2;
+            this.txtInteresEquivalente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInteresEquivalente.ForeColor = System.Drawing.Color.White;
+            this.txtInteresEquivalente.Location = new System.Drawing.Point(172, 11);
+            this.txtInteresEquivalente.Margin = new System.Windows.Forms.Padding(4);
+            this.txtInteresEquivalente.Multiline = false;
+            this.txtInteresEquivalente.Name = "txtInteresEquivalente";
+            this.txtInteresEquivalente.Padding = new System.Windows.Forms.Padding(7);
+            this.txtInteresEquivalente.PasswordChar = false;
+            this.txtInteresEquivalente.ReadOnly = true;
+            this.txtInteresEquivalente.Size = new System.Drawing.Size(218, 31);
+            this.txtInteresEquivalente.TabIndex = 6;
+            this.txtInteresEquivalente.Texts = "";
+            this.txtInteresEquivalente.UnderlinedStyle = true;
             // 
             // FrmPrestamoSistemaFrances
             // 
@@ -543,6 +550,7 @@
             this.penelDatosIzquierdo.PerformLayout();
             this.panelDatosDerecho.ResumeLayout(false);
             this.panelDatosDerecho.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -578,6 +586,6 @@
         private CustomTextBox txtTotalDeCuotas;
         private CustomTextBox txtPagosPorAnio;
         private CustomTextBox txtInteresEquivalente;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
