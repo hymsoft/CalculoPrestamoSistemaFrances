@@ -29,17 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MainContainer = new System.Windows.Forms.Panel();
             this.panelData = new System.Windows.Forms.Panel();
-            this.gridDesglose = new System.Windows.Forms.DataGridView();
-            this.gridNumeroDeCuota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridCuotaAPagar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridInteres = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridCapitalAmortizado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridCapitalAdeudado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelDatos = new System.Windows.Forms.TableLayoutPanel();
             this.penelDatosIzquierdo = new System.Windows.Forms.Panel();
-            this.btnCalcularImporteCuotas = new System.Windows.Forms.Button();
             this.cmbFrecuenciaDePagos = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,6 +48,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label100 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.gridDesglose = new System.Windows.Forms.DataGridView();
+            this.gridNumeroDeCuota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridCuotaAPagar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridInteres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridCapitalAmortizado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridCapitalAdeudado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCalcularImporteCuotas = new ToolBox.CustomButton();
             this.txtPeriodoEnAnios = new ToolBox.CustomTextBox();
             this.txtTNA = new ToolBox.CustomTextBox();
             this.txtCapital = new ToolBox.CustomTextBox();
@@ -62,11 +65,11 @@
             this.txtInteresEquivalente = new ToolBox.CustomTextBox();
             this.MainContainer.SuspendLayout();
             this.panelData.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridDesglose)).BeginInit();
             this.panelDatos.SuspendLayout();
             this.penelDatosIzquierdo.SuspendLayout();
             this.panelDatosDerecho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridDesglose)).BeginInit();
             this.SuspendLayout();
             // 
             // MainContainer
@@ -90,54 +93,6 @@
             this.panelData.Size = new System.Drawing.Size(806, 400);
             this.panelData.TabIndex = 47;
             // 
-            // gridDesglose
-            // 
-            this.gridDesglose.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridDesglose.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridDesglose.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridDesglose.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.gridNumeroDeCuota,
-            this.gridCuotaAPagar,
-            this.gridInteres,
-            this.gridCapitalAmortizado,
-            this.gridCapitalAdeudado});
-            this.gridDesglose.Location = new System.Drawing.Point(12, 6);
-            this.gridDesglose.Name = "gridDesglose";
-            this.gridDesglose.Size = new System.Drawing.Size(786, 386);
-            this.gridDesglose.TabIndex = 10;
-            // 
-            // gridNumeroDeCuota
-            // 
-            this.gridNumeroDeCuota.HeaderText = "Nº de Cuota";
-            this.gridNumeroDeCuota.Name = "gridNumeroDeCuota";
-            this.gridNumeroDeCuota.ReadOnly = true;
-            // 
-            // gridCuotaAPagar
-            // 
-            this.gridCuotaAPagar.HeaderText = "Cuota a pagar";
-            this.gridCuotaAPagar.Name = "gridCuotaAPagar";
-            this.gridCuotaAPagar.ReadOnly = true;
-            // 
-            // gridInteres
-            // 
-            this.gridInteres.HeaderText = "Interés";
-            this.gridInteres.Name = "gridInteres";
-            this.gridInteres.ReadOnly = true;
-            // 
-            // gridCapitalAmortizado
-            // 
-            this.gridCapitalAmortizado.HeaderText = "Capital Amortizado";
-            this.gridCapitalAmortizado.Name = "gridCapitalAmortizado";
-            this.gridCapitalAmortizado.ReadOnly = true;
-            // 
-            // gridCapitalAdeudado
-            // 
-            this.gridCapitalAdeudado.HeaderText = "Capital Adeudado";
-            this.gridCapitalAdeudado.Name = "gridCapitalAdeudado";
-            this.gridCapitalAdeudado.ReadOnly = true;
-            // 
             // panelDatos
             // 
             this.panelDatos.ColumnCount = 2;
@@ -160,10 +115,10 @@
             // penelDatosIzquierdo
             // 
             this.penelDatosIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
+            this.penelDatosIzquierdo.Controls.Add(this.btnCalcularImporteCuotas);
             this.penelDatosIzquierdo.Controls.Add(this.txtPeriodoEnAnios);
             this.penelDatosIzquierdo.Controls.Add(this.txtTNA);
             this.penelDatosIzquierdo.Controls.Add(this.txtCapital);
-            this.penelDatosIzquierdo.Controls.Add(this.btnCalcularImporteCuotas);
             this.penelDatosIzquierdo.Controls.Add(this.cmbFrecuenciaDePagos);
             this.penelDatosIzquierdo.Controls.Add(this.label5);
             this.penelDatosIzquierdo.Controls.Add(this.label4);
@@ -175,19 +130,6 @@
             this.penelDatosIzquierdo.Name = "penelDatosIzquierdo";
             this.penelDatosIzquierdo.Size = new System.Drawing.Size(403, 207);
             this.penelDatosIzquierdo.TabIndex = 0;
-            // 
-            // btnCalcularImporteCuotas
-            // 
-            this.btnCalcularImporteCuotas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCalcularImporteCuotas.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcularImporteCuotas.Location = new System.Drawing.Point(11, 168);
-            this.btnCalcularImporteCuotas.Name = "btnCalcularImporteCuotas";
-            this.btnCalcularImporteCuotas.Size = new System.Drawing.Size(380, 27);
-            this.btnCalcularImporteCuotas.TabIndex = 5;
-            this.btnCalcularImporteCuotas.Text = "Calcular";
-            this.btnCalcularImporteCuotas.UseVisualStyleBackColor = true;
-            this.btnCalcularImporteCuotas.Click += new System.EventHandler(this.btnCalcularImporteCuotas_Click);
             // 
             // cmbFrecuenciaDePagos
             // 
@@ -351,6 +293,124 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // gridDesglose
+            // 
+            this.gridDesglose.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridDesglose.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridDesglose.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
+            this.gridDesglose.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridDesglose.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gridDesglose.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridDesglose.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridDesglose.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridDesglose.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gridNumeroDeCuota,
+            this.gridCuotaAPagar,
+            this.gridInteres,
+            this.gridCapitalAmortizado,
+            this.gridCapitalAdeudado});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridDesglose.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gridDesglose.EnableHeadersVisualStyles = false;
+            this.gridDesglose.GridColor = System.Drawing.Color.DimGray;
+            this.gridDesglose.Location = new System.Drawing.Point(12, 6);
+            this.gridDesglose.Name = "gridDesglose";
+            this.gridDesglose.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridDesglose.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.gridDesglose.RowHeadersVisible = false;
+            this.gridDesglose.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridDesglose.Size = new System.Drawing.Size(786, 386);
+            this.gridDesglose.TabIndex = 10;
+            // 
+            // gridNumeroDeCuota
+            // 
+            this.gridNumeroDeCuota.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.gridNumeroDeCuota.Frozen = true;
+            this.gridNumeroDeCuota.HeaderText = "Nº de Cuota";
+            this.gridNumeroDeCuota.Name = "gridNumeroDeCuota";
+            this.gridNumeroDeCuota.ReadOnly = true;
+            this.gridNumeroDeCuota.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.gridNumeroDeCuota.Width = 149;
+            // 
+            // gridCuotaAPagar
+            // 
+            this.gridCuotaAPagar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.gridCuotaAPagar.Frozen = true;
+            this.gridCuotaAPagar.HeaderText = "Cuota a pagar";
+            this.gridCuotaAPagar.Name = "gridCuotaAPagar";
+            this.gridCuotaAPagar.ReadOnly = true;
+            this.gridCuotaAPagar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.gridCuotaAPagar.Width = 149;
+            // 
+            // gridInteres
+            // 
+            this.gridInteres.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.gridInteres.HeaderText = "Interés";
+            this.gridInteres.Name = "gridInteres";
+            this.gridInteres.ReadOnly = true;
+            this.gridInteres.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.gridInteres.Width = 149;
+            // 
+            // gridCapitalAmortizado
+            // 
+            this.gridCapitalAmortizado.HeaderText = "Capital Amortizado";
+            this.gridCapitalAmortizado.Name = "gridCapitalAmortizado";
+            this.gridCapitalAmortizado.ReadOnly = true;
+            this.gridCapitalAmortizado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // gridCapitalAdeudado
+            // 
+            this.gridCapitalAdeudado.HeaderText = "Capital Adeudado";
+            this.gridCapitalAdeudado.Name = "gridCapitalAdeudado";
+            this.gridCapitalAdeudado.ReadOnly = true;
+            this.gridCapitalAdeudado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // btnCalcularImporteCuotas
+            // 
+            this.btnCalcularImporteCuotas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCalcularImporteCuotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnCalcularImporteCuotas.BackGroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnCalcularImporteCuotas.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCalcularImporteCuotas.BorderRadius = 18;
+            this.btnCalcularImporteCuotas.BorderSize = 0;
+            this.btnCalcularImporteCuotas.FlatAppearance.BorderSize = 0;
+            this.btnCalcularImporteCuotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalcularImporteCuotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalcularImporteCuotas.ForeColor = System.Drawing.Color.White;
+            this.btnCalcularImporteCuotas.Location = new System.Drawing.Point(78, 164);
+            this.btnCalcularImporteCuotas.Name = "btnCalcularImporteCuotas";
+            this.btnCalcularImporteCuotas.Size = new System.Drawing.Size(247, 34);
+            this.btnCalcularImporteCuotas.TabIndex = 41;
+            this.btnCalcularImporteCuotas.Text = "Calcular Importe Cuotas";
+            this.btnCalcularImporteCuotas.TextColor = System.Drawing.Color.White;
+            this.btnCalcularImporteCuotas.UseVisualStyleBackColor = false;
+            this.btnCalcularImporteCuotas.Click += new System.EventHandler(this.btnCalcularImporteCuotas_Click);
             // 
             // txtPeriodoEnAnios
             // 
@@ -544,13 +604,13 @@
             this.Load += new System.EventHandler(this.frmPrestamoSistemaFrances_Load);
             this.MainContainer.ResumeLayout(false);
             this.panelData.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridDesglose)).EndInit();
             this.panelDatos.ResumeLayout(false);
             this.penelDatosIzquierdo.ResumeLayout(false);
             this.penelDatosIzquierdo.PerformLayout();
             this.panelDatosDerecho.ResumeLayout(false);
             this.panelDatosDerecho.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridDesglose)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -559,7 +619,6 @@
         private System.Windows.Forms.Panel MainContainer;
         private System.Windows.Forms.TableLayoutPanel panelDatos;
         private System.Windows.Forms.Panel penelDatosIzquierdo;
-        private System.Windows.Forms.Button btnCalcularImporteCuotas;
         private System.Windows.Forms.ComboBox cmbFrecuenciaDePagos;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -572,12 +631,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label100;
         private System.Windows.Forms.Panel panelData;
-        private System.Windows.Forms.DataGridView gridDesglose;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridNumeroDeCuota;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridCuotaAPagar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridInteres;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridCapitalAmortizado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridCapitalAdeudado;
         private CustomTextBox txtCapital;
         private CustomTextBox txtPeriodoEnAnios;
         private CustomTextBox txtTNA;
@@ -587,5 +640,12 @@
         private CustomTextBox txtPagosPorAnio;
         private CustomTextBox txtInteresEquivalente;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private CustomButton btnCalcularImporteCuotas;
+        private System.Windows.Forms.DataGridView gridDesglose;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridNumeroDeCuota;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridCuotaAPagar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridInteres;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridCapitalAmortizado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridCapitalAdeudado;
     }
 }

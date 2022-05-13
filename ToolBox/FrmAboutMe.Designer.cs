@@ -36,9 +36,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblAboutMe = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.lineSeparator2 = new ToolBox.LineSeparator();
+            this.lineSeparator2 = new ToolBox.CustomLineSeparator();
             this.clsCircularPictureBox1 = new ToolBox.CircularPictureBox();
-            this.lineSeparator1 = new ToolBox.LineSeparator();
+            this.lineSeparator1 = new ToolBox.CustomLineSeparator();
             this.linkEdin = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
@@ -261,9 +261,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblAboutMe;
-        private LineSeparator lineSeparator1;
+        private CustomLineSeparator lineSeparator1;
         private System.Windows.Forms.Label label5;
-        private LineSeparator lineSeparator2;
+        private CustomLineSeparator lineSeparator2;
         private FontAwesome.Sharp.IconButton linkEdin;
         private FontAwesome.Sharp.IconButton iconButton1;
     }

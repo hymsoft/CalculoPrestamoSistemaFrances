@@ -62,6 +62,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="colorThemes.cs" />
+    <Compile Include="CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CustomTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -92,7 +95,7 @@
     <Compile Include="FrmPSF.designer.cs">
       <DependentUpon>FrmPSF.cs</DependentUpon>
     </Compile>
-    <Compile Include="LineSeparator.cs">
+    <Compile Include="CustomLineSeparator.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />

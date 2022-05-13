@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace ToolBox
 {
-    class LineSeparator : Control
+    class CustomLineSeparator : Control
     {
         private int borderSize = 1;
         private bool isVertical;
